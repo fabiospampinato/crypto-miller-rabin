@@ -1,0 +1,39 @@
+{
+  "name": "crypto-miller-rabin",
+  "repository": "github:fabiospampinato/crypto-miller-rabin",
+  "description": "Implementation of the Miller-Rabin primality test.",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "benchmark": "tsex benchmark",
+    "benchmark:watch": "tsex benchmark --watch",
+    "clean": "tsex clean",
+    "compile": "tsex compile",
+    "compile:watch": "tsex compile --watch",
+    "test": "tsex test",
+    "test:watch": "tsex test --watch",
+    "prepublishOnly": "tsex prepare"
+  },
+  "keywords": [
+    "crypto",
+    "miller",
+    "rabin",
+    "prime",
+    "primality",
+    "test"
+  ],
+  "dependencies": {
+    "crypto-random-in-range": "^2.0.0",
+    "fast-mod-exp": "^1.0.0"
+  },
+  "devDependencies": {
+    "benchloop": "^2.1.0",
+    "crypto-sieve": "^1.0.0",
+    "fava": "^0.2.1",
+    "tsex": "^3.0.1",
+    "typescript": "^5.1.6"
+  }
+}
