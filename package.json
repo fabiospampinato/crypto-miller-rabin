@@ -3,7 +3,7 @@
   "repository": "github:fabiospampinato/crypto-miller-rabin",
   "description": "Implementation of the Miller-Rabin primality test.",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
