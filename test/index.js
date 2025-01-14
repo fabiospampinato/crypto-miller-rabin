@@ -25,4 +25,18 @@ describe ( 'Crypto Miller Rabin', it => {
 
   });
 
+  it ( 'works for negative numbers', t => {
+
+    t.is ( isProbablyPrime ( -1n ), false );
+    t.is ( isProbablyPrime ( -10000n ), false );
+
+  });
+
+  it ( 'works for 0 and 1', t => {
+
+    t.is ( isProbablyPrime ( 0n ), false );
+    t.is ( isProbablyPrime ( 1n ), false );
+
+  });
+
 });

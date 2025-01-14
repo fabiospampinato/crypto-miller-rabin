@@ -1,9 +1,9 @@
 
 /* IMPORT */
 
-import {PRIMES_1000} from './constants';
 import getRandomInRange from 'crypto-random-in-range';
 import fme from 'fast-mod-exp';
+import {PRIMES_1000} from './constants';
 
 /* MAIN */
 
@@ -13,7 +13,11 @@ const isProbablyPrime = ( n: bigint, k: number = 8 ): boolean => {
 
   /* FAST EXACT CHECKS */
 
-  for ( const prime of PRIMES_1000 ) {
+  if ( n <= 1n ) return false;
+
+  for ( let i = 0, l = PRIMES_1000.length; i < l; i++ ) {
+
+    const prime = PRIMES_1000[i];
 
     if ( n % prime === 0n ) return n === prime;
 
